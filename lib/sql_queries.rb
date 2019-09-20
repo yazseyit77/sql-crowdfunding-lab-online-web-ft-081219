@@ -19,7 +19,7 @@ def selects_the_user_name_age_and_pledge_amount_for_all_pledges_alphabetized_by_
   "SELECT users.name, pledges.amount
   FROM users
   LEFT JOIN pledges
-  ON pledges.project_id = projects.id
+  ON pledges.user_id = users.id
   GROUP BY projects.title
   ORDER BY projects.title"
 end
